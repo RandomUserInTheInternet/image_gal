@@ -47,6 +47,9 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Reset the form
     form.reset();
+
+    // Connect to PolyScale and save the image data
+    connectToPolyScale(file, polyScaleUrl);
   });
 
   // Add event listeners for image overlay click and close button click
@@ -66,7 +69,12 @@ document.addEventListener('DOMContentLoaded', function() {
     popup.classList.remove('show');
   });
 
-  // Use polyScaleUrl for database connection or other purposes
-  // Replace 'your_polyscale_url' with the actual PolyScale URL
-  console.log('Connecting to PolyScale using URL:', polyScaleUrl);
+  // Function to connect to PolyScale and save the image data
+  function connectToPolyScale(file, polyScaleUrl) {
+    // Replace this code with your PolyScale integration code
+    // Use the 'file' and 'polyScaleUrl' variables as needed
+    // Example:
+    console.log('Connecting to PolyScale using URL:', polyScaleUrl);
+    console.log('Saving image data:', file.name);
+  }
 });
