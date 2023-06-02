@@ -8,6 +8,9 @@ document.addEventListener('DOMContentLoaded', function() {
   var popupImage = document.getElementById('popup-image');
   var closeBtn = document.getElementById('close-btn');
 
+  // Replace 'your_polyscale_url' with the actual PolyScale URL
+  var polyScaleUrl = 'your_polyscale_url';
+
   // Add an event listener for form submission
   form.addEventListener('submit', function(event) {
     event.preventDefault(); // Prevent the form from submitting
@@ -62,4 +65,8 @@ document.addEventListener('DOMContentLoaded', function() {
   closeBtn.addEventListener('click', function() {
     popup.classList.remove('show');
   });
+
+  // Use polyScaleUrl for database connection or other purposes
+  // Replace 'your_polyscale_url' with the actual PolyScale URL
+  console.log('Connecting to PolyScale using URL:', polyScaleUrl);
 });
