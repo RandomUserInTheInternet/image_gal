@@ -9,7 +9,7 @@ document.addEventListener('DOMContentLoaded', function() {
   var closeBtn = document.getElementById('close-btn');
 
   // Replace 'your_polyscale_url' with the actual PolyScale URL
-  var polyScaleUrl = 'your_polyscale_url';
+  var polyScaleUrl = 'mysql://e2a76814-0e3b-40bb-a154-5eabf635ba45-[USERNAME]:[PASSWORD]@psedge.global:3306/[DATABASE]';
 
   // Add an event listener for form submission
   form.addEventListener('submit', function(event) {
