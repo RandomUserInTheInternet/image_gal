@@ -1,0 +1,46 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Gallery</title>
+  <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <header class="header">
+      <h1>LOST IN THE WEB</h1>
+      <h2><em>"Upload your random image here"</em></h2>
+    </header>
+
+    <main>
+   <section class="upload">
+  <h2>Upload Your Images</h2>
+  <form action="/.netlify/functions/upload" method="POST" enctype="multipart/form-data">
+    <input type="file" name="image" accept="image/*" required>
+    <button type="submit">Upload Image</button>
+  </form>
+</section>
+
+      <section class="image">
+        <h2>Image Gallery</h2>
+        <p>Check out the images that users have uploaded.</p>
+        <ul id="image-gallery">
+          <!-- Dynamically added images will appear here -->
+        </ul>
+      </section>
+    </main>
+
+    <footer>
+      <p>Start sharing your own images today and become part of my image collection hehe</p>
+      <p>© 2023 Open gallery. All rights reserved.</p>
+    </footer>
+  </div>
+
+  <div id="image-popup" class="image-popup">
+    <img id="popup-image" src="" alt="Popup Image">
+    <span id="close-btn" class="close-btn">&times;</span>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
