@@ -70,11 +70,27 @@ document.addEventListener('DOMContentLoaded', function() {
   });
 
   // Function to connect to PolyScale and save the image data
-  function connectToPolyScale(file, polyScaleUrl) {
-    // Replace this code with your PolyScale integration code
-    // Use the 'file' and 'polyScaleUrl' variables as needed
-    // Example:
-    console.log('Connecting to PolyScale using URL:', polyScaleUrl);
-    console.log('Saving image data:', file.name);
-  }
-});
+function connectToPolyScale(file, polyScaleUrl) {
+  // Create a new FormData object
+  var formData = new FormData();
+
+  // Append the image file to the form data
+  formData.append('image', file);
+
+  // Send a POST request to the PolyScale URL
+  fetch(polyScaleUrl, {
+    method: 'POST',
+    body: formData
+  })
+  .then(function(response) {
+    if (response.ok) {
+      console.log('Image data saved to PolyScale successfully.');
+    } else {
+      console.log('Failed to save image data to PolyScale.');
+    }
+  })
+  .catch(function(error) {
+    console.log('An error occurred while saving image data to PolyScale:', error);
+  });
+}
+
